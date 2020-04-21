@@ -1,2 +1,2 @@
 # to-do
-To Do list wpa based on js
+To Do list pwa based on js
