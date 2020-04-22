@@ -1,6 +1,6 @@
 html{height:100%} 
 body {
-    background: linear-gradient(110deg, #6abed3 40%, #b471ce 60%);
+    background: #111220;
     background-size: cover;
     background-repeat: no-repeat;
    }
@@ -45,4 +45,8 @@ li{
 .container {
     margin: auto;
     text-align: left;
+    background-color: #73e25d;
+    width: auto;
+    border: 10px #343a86;
+    padding: 50px;
   }
