@@ -10,6 +10,7 @@ window.onload = () => {
     }
 }
 //showInstallPromotion();
+console.log('debug')
 if(localStorage.getItem('localKey') !== null){
     key = localStorage.getItem('localKey');
 }
@@ -24,6 +25,7 @@ if(key !== 0){
         ul.appendChild(li);
     }
 }
+console.log('debug2')
 input.addEventListener('click', e => {
     console.log('hi');
     data = document.getElementById('data');
