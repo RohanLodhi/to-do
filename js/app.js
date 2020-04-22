@@ -1,6 +1,13 @@
 var data;
 const input = document.querySelector('button');
 var key=0;
+window.onload = () => {
+    'use strict';
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+}
 if(localStorage.getItem('localKey') !== null){
     key = localStorage.getItem('localKey');
 }
@@ -37,6 +44,24 @@ input.addEventListener('click', e => {
         data.value="";
     };
 });
+const field = document.querySelector('input')
+console.log(field)
+field.addEventListener('keypress', e => {
+    if(e.key==='Enter'){
+        var li = document.createElement('li');
+        var ul = document.querySelector('ul');
+        if(field.value !== ""){
+            li.appendChild(document.createTextNode(field.value));
+            ul.appendChild(li);
+            localStorage.setItem(key, field.value);
+            key = parseInt(key)
+            console.log(key)
+            key+=1;
+            localStorage.setItem('localKey',key);
+            field.value="";
+        };
+    }
+});
 const removeList = document.getElementById('delete')
 removeList.addEventListener('click',() => {
     for(i=0;i<key;i++){
@@ -44,7 +69,7 @@ removeList.addEventListener('click',() => {
         var li =document.querySelector('li');
         li.remove();
     }
-    localStorage.removeItem('localKey')
-    console.log(localStorage.getItem('localKey'))
+    localStorage.removeItem('localKey');
+    console.log(localStorage.getItem('localKey'));
     key = 0;
-})
+}); 
