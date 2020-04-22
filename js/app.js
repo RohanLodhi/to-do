@@ -5,7 +5,7 @@ window.onload = () => {
     'use strict';
   
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js');
+      navigator.serviceWorker.register('./sw.js',{scope:"/todo"});
     }
 }
 if(localStorage.getItem('localKey') !== null){

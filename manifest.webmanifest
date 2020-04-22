@@ -29,7 +29,7 @@
         "sizes": "180x180"
       }
     ],
-    "start_url": "/",
+    "start_url": "/?source=pwa",
     "background_color": "#3367D6",
     "display": "standalone",
     "scope": "/",
