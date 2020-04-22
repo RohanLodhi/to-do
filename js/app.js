@@ -10,7 +10,7 @@ else{
     key = 0;
 }
 if(key !== 0){
-    for(i=0;i<key;i++){
+    for(i=1;i<key;i++){
         var li = document.createElement('li');
         var ul = document.querySelector('ul');
         li.appendChild(document.createTextNode(localStorage.getItem(i)));
