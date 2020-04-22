@@ -17,7 +17,6 @@ else{
     key = 0;
 }
 if(key !== 0){
-    console.log(key);
     for(i=0;i<key;i++){
         var li = document.createElement('li');
         var ul = document.querySelector('ul');
