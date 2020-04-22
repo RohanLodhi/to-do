@@ -1,14 +1,6 @@
 var data;
 const input = document.querySelector('button');
-
 var key=0;
-window.onload = () => {
-    'use strict'; 
-
-    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js');
-    }
-}
 //showInstallPromotion();
 console.log('debug')
 if(localStorage.getItem('localKey') !== null){
