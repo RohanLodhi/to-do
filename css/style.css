@@ -5,48 +5,40 @@ body {
     background-repeat: no-repeat;
    }
 .title{
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: 'Roboto Slab', serif;
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 80px; 
+    font-weight: bold; 
     margin-top: 0px;
-    margin-bottom: 1px;
+    margin-bottom: 1px; 
 }
 .p{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
+    color: antiquewhite;
 }
-.button{
+.button{ 
     border-radius: 5px;
     cursor: pointer;
     font-size: 12px;
     font-weight: bold;
     line-height: 18px;
     vertical-align: top;
-    background-color: #4ea2b8;
+    background-color: #61e9f3;
     border-color: #000000;
 }
 .input{
     border-color: #000000;
     margin: 2px;
     width: 142px;
-    background-color: #4ea2b8;
+    background-color: #61e9f3;
 }
 li{
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    list-style-type: default;
     max-width: 200px;
     padding: 8px;
     margin: 8px;
-    background: #67eb8f;
+    background: #61e9f3;
     border: 1px dotted #ddd;
-}
-.container {
-    margin: auto;
-    text-align: left;
-    background-color: #73e25d;
-    width: auto;
-    border: 10px #343a86;
-    padding: 50px;
-  }
+} 

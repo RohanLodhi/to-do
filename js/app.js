@@ -19,18 +19,19 @@ if(key !== 0){
     console.log(key)
     for(i=0;i<key;i++){
         var li = document.createElement('li');
-        var ul = document.querySelector('ul');
+        var ol = document.querySelector('ol');
         li.appendChild(document.createTextNode(localStorage.getItem(i)));
-        ul.appendChild(li);
+        ol.appendChild(li);
     }
 }
 input.addEventListener('click', e => {
     data = document.getElementById('data');
     var li = document.createElement('li');
-    var ul = document.querySelector('ul');
+    var ol = document.querySelector('ol');
+    console.log(ol) 
     if(data.value !== ""){
         li.appendChild(document.createTextNode(data.value));
-        ul.appendChild(li);
+        ol.appendChild(li);
         localStorage.setItem(key, data.value);
         key = parseInt(key)
         console.log(key)
@@ -50,10 +51,10 @@ console.log(field)
 field.addEventListener('keypress', e => {
     if(e.key==='Enter'){
         var li = document.createElement('li');
-        var ul = document.querySelector('ul');
+        var ol = document.querySelector('ol');
         if(field.value !== ""){
             li.appendChild(document.createTextNode(field.value));
-            ul.appendChild(li);
+            ol.appendChild(li);
             localStorage.setItem(key, field.value);
             key = parseInt(key)
             console.log(key)
