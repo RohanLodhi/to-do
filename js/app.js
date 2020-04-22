@@ -1,14 +1,15 @@
 var data;
 const input = document.querySelector('button');
+
 var key=0;
 window.onload = () => {
-    'use strict';
-  
+    'use strict'; 
+
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js');
+    navigator.serviceWorker.register('./sw.js');
     }
 }
-showInstallPromotion();
+//showInstallPromotion();
 if(localStorage.getItem('localKey') !== null){
     key = localStorage.getItem('localKey');
 }
@@ -16,7 +17,7 @@ else{
     key = 0;
 }
 if(key !== 0){
-    console.log(key)
+    console.log(key);
     for(i=0;i<key;i++){
         var li = document.createElement('li');
         var ul = document.querySelector('ul');
@@ -25,19 +26,20 @@ if(key !== 0){
     }
 }
 input.addEventListener('click', e => {
-    console.log('hi') 
+    console.log('hi');
     data = document.getElementById('data');
     var li = document.createElement('li');
     var ul = document.querySelector('ul');
-    console.log(ul) 
+
     if(data.value !== ""){
         li.appendChild(document.createTextNode(data.value));
         ul.appendChild(li);
         localStorage.setItem(key, data.value);
-        key = parseInt(key)
-        console.log(key)
+        key = parseInt(key);
+        
         key+=1;
         localStorage.setItem('localKey',key);
+
         li.addEventListener('click', e => {
             e.target.style.textDecoration = 'line-through';
         });
@@ -47,8 +49,8 @@ input.addEventListener('click', e => {
         data.value="";
     };
 });
-const field = document.querySelector('input')
-console.log(field)
+const field = document.querySelector('input');
+console.log(field);
 field.addEventListener('keypress', e => {
     if(e.key==='Enter'){
         var li = document.createElement('li');
@@ -57,15 +59,15 @@ field.addEventListener('keypress', e => {
             li.appendChild(document.createTextNode(field.value));
             ul.appendChild(li);
             localStorage.setItem(key, field.value);
-            key = parseInt(key)
-            console.log(key)
+            key = parseInt(key);
+
             key+=1;
             localStorage.setItem('localKey',key);
             field.value="";
         };
     }
 });
-const removeList = document.getElementById('delete')
+const removeList = document.getElementById('delete');
 removeList.addEventListener('click',() => {
     for(i=0;i<key;i++){
         localStorage.removeItem(i);
@@ -73,6 +75,5 @@ removeList.addEventListener('click',() => {
         li.remove();
     }
     localStorage.removeItem('localKey');
-    console.log(localStorage.getItem('localKey'));
     key = 0;
 }); 
