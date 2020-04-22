@@ -40,7 +40,7 @@
     <script>
         if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js',{scope:"/todo"})
+            navigator.serviceWorker.register('./sw.js',{scope:"/todo"})
                 .then((reg) => {
                 console.log('Service worker registered.', reg);
                 });
