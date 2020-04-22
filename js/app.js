@@ -15,6 +15,12 @@ if(key !== 0){
         var ul = document.querySelector('ul');
         li.appendChild(document.createTextNode(localStorage.getItem(i)));
         ul.appendChild(li);
+        li.addEventListener('click', e => {
+            e.target.style.textDecoration = 'line-through';
+        });
+        li.addEventListener('dblclick', e =>{
+            e.target.remove();
+        });
     }
 }
 console.log('debug2')
