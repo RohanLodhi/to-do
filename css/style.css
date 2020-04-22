@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
    }
-.title{
+.title{ 
     color: rgb(255, 255, 255);
     font-family: 'Roboto Slab', serif;
     font-size: 80px; 
@@ -34,8 +34,10 @@ body {
     background-color: #61e9f3;
 }
 li{
+    list-style-type: none;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
+    width: auto;
     max-width: 200px;
     padding: 8px;
     margin: 8px;
