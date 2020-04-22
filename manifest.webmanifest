@@ -29,11 +29,7 @@
       "sizes": "180x180"
     }
   ],
-<<<<<<< HEAD
-  "start_url": "/",
-=======
   "start_url": "./",
->>>>>>> cb51f082737712478558e46a95c50d4b135e9be3
   "background_color": "#3367D6",
   "display": "standalone",
   "scope": ".",
